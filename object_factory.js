@@ -8,6 +8,11 @@ function Person(name, first, second, third) {
     return this.first + this.second + this.third;
   };
 }
+
+Person.prototype.sum = function () {
+  return "prototype: " + (this.first + this.second);
+};
+
 //비슷한 형태의 객체를 constructor를 통해 한번에 수정 하여 불필요한 반복작업을 줄일 수 있다.
 const kim = new Person("kim", 10, 20, 10);
 const lee = new Person("lee", 40, 20, 20);
